@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter/services.dart';
-import 'package:flutter_opencv/flutter_opencv.dart';
+import 'package:flutter_opencv/opencv.dart';
 
-void main() => runApp(new MyApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
   @override
-  _MyAppState createState() => new _MyAppState();
+  _MyAppState createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
-  String _platformVersion = 'Unknown';
+  String _versionString = "Unknown";
 
   @override
   void initState() {
@@ -22,12 +22,13 @@ class _MyAppState extends State<MyApp> {
 
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
-    String platformVersion;
+    String versionString;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
-      platformVersion = await FlutterOpenCV.versionString;
-    } on PlatformException {
-      platformVersion = 'Failed to get platform version.';
+      versionString = await OpenCV.versionString;
+    }
+    on PlatformException {
+      versionString = "Failed to get OpenCV version.";
     }
 
     // If the widget was removed from the tree while the asynchronous platform
@@ -36,19 +37,19 @@ class _MyAppState extends State<MyApp> {
     if (!mounted) return;
 
     setState(() {
-      _platformVersion = platformVersion;
+      _versionString = versionString;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: const Text('Plugin example app'),
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("OpenCV for Flutter"),
         ),
-        body: new Center(
-          child: new Text('Running on: $_platformVersion\n'),
+        body: Center(
+          child: Text("OpenCV version: $_versionString\n"),
         ),
       ),
     );

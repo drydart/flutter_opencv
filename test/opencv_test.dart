@@ -2,6 +2,8 @@
 
 import 'package:test/test.dart';
 
+import 'package:flutter_opencv/opencv.dart';
+
 void main() {
   // TODO
 }
