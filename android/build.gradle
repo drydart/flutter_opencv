@@ -1,4 +1,4 @@
-group 'com.github.drydart.flutteropencv'
+group 'com.github.drydart.flutter_opencv'
 version '1.0-SNAPSHOT'
 
 buildscript {

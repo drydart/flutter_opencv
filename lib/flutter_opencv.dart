@@ -4,7 +4,7 @@ import 'dart:async';
 
 import 'package:flutter/services.dart';
 
-class FlutterOpencv {
+class FlutterOpenCV {
   static const MethodChannel _channel =
       const MethodChannel('flutter_opencv');
 

@@ -1,10 +1,10 @@
 import Flutter
 import UIKit
 
-public class SwiftFlutterOpencvPlugin: NSObject, FlutterPlugin {
+public class SwiftFlutterOpenCVPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
     let channel = FlutterMethodChannel(name: "flutter_opencv", binaryMessenger: registrar.messenger())
-    let instance = SwiftFlutterOpencvPlugin()
+    let instance = SwiftFlutterOpenCVPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }
 

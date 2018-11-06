@@ -17,5 +17,5 @@ environment:
 executables:
 flutter:
   plugin:
-    androidPackage: com.github.drydart.flutteropencv
-    pluginClass: FlutterOpencvPlugin
+    androidPackage: com.github.drydart.flutter_opencv
+    pluginClass: FlutterOpenCVPlugin

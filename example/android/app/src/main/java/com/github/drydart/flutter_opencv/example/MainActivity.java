@@ -1,4 +1,4 @@
-package com.github.drydart.flutteropencvexample;
+package com.github.drydart.flutter_opencv.example;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;

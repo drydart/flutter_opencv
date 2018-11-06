@@ -1,8 +1,8 @@
-#import "FlutterOpencvPlugin.h"
+#import "FlutterOpenCVPlugin.h"
 #import <flutter_opencv/flutter_opencv-Swift.h>
 
-@implementation FlutterOpencvPlugin
+@implementation FlutterOpenCVPlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
-  [SwiftFlutterOpencvPlugin registerWithRegistrar:registrar];
+  [SwiftFlutterOpenCVPlugin registerWithRegistrar:registrar];
 }
 @end
