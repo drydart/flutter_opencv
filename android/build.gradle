@@ -28,7 +28,21 @@ android {
         minSdkVersion 16
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
     lintOptions {
         disable 'InvalidPackage'
     }
+}
+
+dependencies {
+    // See: https://github.com/bytedeco/javacpp-presets/tree/master/opencv
+    // See: https://mvnrepository.com/artifact/org.bytedeco.javacpp-presets/opencv-platform
+    compile 'org.bytedeco.javacpp-presets:opencv:3.4.3-1.4.3'
+
+    //compile 'org.bytedeco.javacpp-presets:opencv:3.4.3-1.4.3:android-arm'
+    //compile 'org.bytedeco.javacpp-presets:opencv:3.4.3-1.4.3:android-arm64'
+    compile 'org.bytedeco.javacpp-presets:opencv:3.4.3-1.4.3:android-x86'
+    //compile 'org.bytedeco.javacpp-presets:opencv:3.4.3-1.4.3:android-x86_64'
+    //compile 'org.bytedeco.javacpp-presets:opencv:3.4.3-1.4.3:ios-arm64'
+    //compile 'org.bytedeco.javacpp-presets:opencv:3.4.3-1.4.3:ios-x86_64'
 }

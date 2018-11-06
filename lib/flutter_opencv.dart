@@ -5,11 +5,13 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 
 class FlutterOpenCV {
-  static const MethodChannel _channel =
-      const MethodChannel('flutter_opencv');
+  static const MethodChannel _channel = MethodChannel('flutter_opencv');
 
-  static Future<String> get platformVersion async {
-    final String version = await _channel.invokeMethod('getPlatformVersion');
-    return version;
+  static Future<String> get buildInformation async {
+    return await _channel.invokeMethod('getBuildInformation') as String;
+  }
+
+  static Future<String> get versionString async {
+    return await _channel.invokeMethod('getVersionString') as String;
   }
 }
