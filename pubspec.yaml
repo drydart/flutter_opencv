@@ -2,14 +2,14 @@
 name: flutter_opencv
 version: 0.0.4
 description: >-
-  OpenCV Bindings for Flutter
+  Flutter plugin for the OpenCV open-source computer vision library.
 author: Arto Bendiken <arto@bendiken.net>
 homepage: https://github.com/drydart/flutter_opencv
 documentation:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_android: ^0.1.9
+  flutter_android: ^0.1.12
   meta: ^1.1.6
   vector_math: ^2.0.8
 dev_dependencies:
