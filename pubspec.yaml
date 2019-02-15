@@ -9,7 +9,7 @@ documentation:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_android: ^0.1.12
+  flutter_android: ^0.3.2
   meta: ^1.1.6
   vector_math: ^2.0.8
 dev_dependencies:
